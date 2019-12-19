@@ -31,7 +31,7 @@ $ unzip terraform_0.12.18_darwin_amd64.zip
 $ cp ./terraform /usr/local/bin
 ```
 2.Create env-vars file
-
+```
 $ cat env-vars
 export TF_VAR_tenancy_ocid=
 export TF_VAR_user_ocid=
@@ -44,17 +44,17 @@ export TF_VAR_ssh_public_key=$(cat ~/.ssh/id_rsa.pub)
 export TF_VAR_ssh_private_key=$(cat ~/.ssh/id_rsa)
 
 export TF_VAR_region=
-
+```
 3.Create OCI (OKE) k8s infrastructure
-
+```
 $ source env-vars
 $ terraform init
 $ terraform plan
 $ terraform apply
-
+```
 4.Accessing Kubernetes Cluster using kubectl and creating an Application on Kubernetes Cluster.
 
-
+```
 $ cat ~/.bash_profile|grep OCI
 export OCI=/Users/davar/bin
 export PATH=$OCI:$PATH
@@ -100,13 +100,13 @@ nginx-755464dd6c-z466g   1/1     Running   0          43s   10.244.0.4   10.0.2.
 
 $ kubectl expose deployment nginx --port=80 --type=LoadBalancer
 service/nginx exposed
-
+```
 
 
 5.Clean OCI infrastructure
-
+```
 $ terraform destroy
-
+```
 Details:
 
 - [Terraform Kubernetes on Oracle Cloud](#Terraform-Kubernetes-on-Oracle-Cloud)
