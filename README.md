@@ -1,4 +1,4 @@
-# Terraform k8s on Oracle Cloud Infrastructure (OKE): Demo
+# Terraform + k8s on Oracle Cloud Infrastructure (OKE : Container Engine For Kubernetes) demo
 
 This repository contains ready-to-use Kubernetes Cluster on Oracle Container Engine for Kubernetes (OKE).
 
